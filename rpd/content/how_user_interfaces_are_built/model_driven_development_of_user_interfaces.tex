@@ -8,4 +8,16 @@ UML\footnote{Unified Modelling Language} is the industry standard for software m
 
 With this notation you can specify inputs, outputs and actions in a way that classic UML notation doesn’t support. Tasks can also be specified in UMLi, but without any extension to UML. Tasks can be modeled using Use Cases and Activity Diagrams which are part of the UML specification.
 
-Concur task trees -> Falta falar disto!
+Task modelling has become very popular for modelling interactive systems and it's, probably, the most important method right now. A task consists how a user can reach a goal in a specific context. CTT is the most popular language for task modelling \cite{ConcurTaskTrees_A_Diagrammatic_Notation_for_Specifying_Task_Models}. With CTT the task model is built in three phases:
+\begin{itemize}
+\item First a hierarchical logical decomposition of the tasks represented by a tree-like structure;
+\item Then an identification of the temporal relationships among tasks at the same level;
+\item And finally an identification of the objects associated with each task and of the actions which allow them to communicate with each other.
+\end{itemize} 
+\image{8cm}{content/how_user_interfaces_are_built/ctte_login.png}{Login task modelled in CTT}
+
+Figure \ref{content/how_user_interfaces_are_built/ctte_login.png} shows the login task modelled in CTT. The tool used to create this model was CTTE (Quote Site CTTE) which is one of the most popular tools for the CTT language. This tool supports the creation and animation of models but doesn’t offer any feature to perform any transformation to a more specific format.
+
+Another well known tool for CTT is \textit{IdealXML} \cite{IdealXml_An_Interaction_Design_Tool}. This tool can also be used to model tasks using CTT but it also has the capability to transform the models into more specific ones, namely, user interface specifications in \textit{UsiXML}.
+
+In conclusion, there is a lot of work regarding model driven development for user interfaces and the idea that models can simplify the development process is becoming more consensual. The biggest problem with this methodology is the tool support that still isn't mature enough to be adopted by the industry. Being a method where the product of engineer's work is platform independent and both easily maintainable and reusable, model driven development will surely play an important role on the future of software development and more specifically on the development of user interfaces.
