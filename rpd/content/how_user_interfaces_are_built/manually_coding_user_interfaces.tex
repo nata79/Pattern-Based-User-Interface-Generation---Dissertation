@@ -1,0 +1,80 @@
+\subsection{Manually coding user interfaces}
+Before there were more advanced tools user interfaces were coded manually, like everything else. Nowadays although we have these tools, most developers still think this is the best way because it gives them more control over their work.
+
+This is a very time consuming technique because humans have to do most of the work but in the end it really depends on what language or framework you're working on. Most popular and modern programming languages give developers access to frameworks for building GUI's\footnote{Graphical user interface.} like GTK+, Swing or Windows Forms. These examples are for the desktop side. On the web side everything is (X)HTML, CSS and JavaScript but there are a lot of frameworks to abstract from these languages like JSF , Struts or ASP.net.
+Most desktop GUI frameworks use the same language for views and the other software layers. This means that a lot of code has to be written In order to get things done. Frameworks like GTK+, Swing and Windows forms are very hard to use without help from more advanced tools.
+Let's take a look at simple Swing example that shows a basic login window.
+\lstset{language=Java}
+\begin{lstlisting}[caption={Login window using Swing, coded manually}]
+public static void main(String[] args) {
+        SwingManualTest sm = new SwingManualTest();
+        sm.showLoginWindow();
+    }
+
+    private void showLoginWindow(){
+        Container c = getContentPane();
+        c.setLayout(new GridLayout(3, 2));
+        c.add(new JLabel("Username:"));
+        c.add(new JTextField());
+        c.add(new JLabel("Password:"));
+        c.add(new JTextField());
+        c.add(new JButton("Login"));
+        c.add(new JButton("Cancel"));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+    }
+\end{lstlisting}
+It's plain Java so every control is an object. For some OOP\footnote{Object oriented programming.} enthusiasts this is a good thing but it's incomprehensible for designers and even for most developers this is very hard and thus very time consuming.
+
+Fortunately, on the web side things are simpler. Most frameworks use HTML with some specific extensions to specify the views. This offer developers a more declarative paradigm which makes a lot more sense when building interfaces. This approach also produces a lot less code which makes maintenance a lot easier. Let's take a look at an example similar to the previous one but this time using JSF\footnote{Java server faces.}.
+\lstset{language=HTML}
+\begin{lstlisting}[caption={Login window using JSF}]
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Username:" />
+            <h:inputText />
+            <h:outputLabel value="Password:" />
+            <h:inputSecret />
+            <h:button value="Login" />
+            <h:button value="Cancel" />
+        </h:form>
+    </h:body>
+</html>
+\end{lstlisting}
+This is very different than the first example. It's not just more intuitive for developers, it's a little bit more understandable for designers too because it's based on HTML. 
+
+Recently have been developed new frameworks for desktop GUI's that resemble the web ones that were referenced earlier. One good example is the WPF\footnote{Windows Presentation Foundation.} framework. It uses the XAML\footnote{Extensible Application Markup Language.} language to specify views. It's a markup language based on XML\footnote{Extensible Markup Language.} and, thus, more like HTML. Let's take a look at the login window coded for WPF.
+\lstset{language=XML}
+\begin{lstlisting}[caption={Login window using WPF}]
+<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login Window" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Username:" Grid.Column="0" Grid.Row="0" />
+        <TextBox Grid.Column="1" Grid.Row="0" Width="150" />
+        <TextBlock Text="Password:" Grid.Column="0" Grid.Row="1" />
+        <TextBox Grid.Column="1" Grid.Row="1" Width="150" />
+        <Button Grid.Column="0" Grid.Row="2" Width="150">Login</Button>
+        <Button Grid.Column="1" Grid.Row="2" Width="150">Cancel</Button>
+    </Grid>
+</Window>
+\end{lstlisting}
+Even though this language is a lot more verbose than HTML and other markup languages it's a very good alternative for building desktop GUI's, especially if you're going to write all the code manually.
+
+The conclusion of this section is that manually coding user interfaces isn't always a good idea depending on the technology you're using. The first frameworks that were presented use programming languages to specify the views. That doesn't look like a very good approach because it's not intuitive for the developer and incomprehensible for designers. On the other hand the later solutions use specific languages for specifying views which are more intuitive and easy to write but they oblige developers to learn these new languages. The other problem is that all the code produced is platform specific. If you're planning on porting your application to other devices, all the code has to be written all over again.

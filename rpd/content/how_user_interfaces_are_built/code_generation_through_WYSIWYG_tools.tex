@@ -1,0 +1,9 @@
+\subsection{Code generation through WYSIWYG tools}
+The concept of WYSIWYG is used in a variety of situations. From text processing to building user interfaces. One of the most recognized tools of this kind is Microsoft Word for text processing. What tools of this kind attempt to do is offer the user an interface that shows exactly the final result of what they're doing.
+
+In software development the most popular WYSIWYG environments are the ones provided by Java IDE's like \textit{Netbeans} to build Swing interfaces or Microsoft Visual Studio that provides WYSIWYG tools for a variety of frameworks like Windows Forms, WPF or ASP.net. Let's take a closer look to \textit{Netbeans}.
+\image{12cm}{content/how_user_interfaces_are_built/netbeans_swing_WYSIWYG.png}{Netbeans Swing WYSIWYG tool}
+
+Like you would expect from this tool, it has a canvas where the final GUI appears and a side menu from where you can drag controls and drop them into the canvas. It's very simple and intuitive and thus very attractive for novices. The problem with this kind of tools is maintainability. It's very easy and quick to build something, if it's not very advanced, but it's a real challenge when there's a need to change the layout. Making a manual change in the generated code is not an option, mainly because is too complex but also because it's often blocked by the IDE itself. The other tools are very similar so there is no need to give further examples.
+
+In conclusion, WYSIWYG tools are good for novices but don't suppress all the needs of the software industry where maintainability is a very important issue. There's also the problem of portability, the produced code is platform specific. Other important issue is re-usability. GUI's frameworks usually offer some way to reuse components in different contexts. This is can be easily achieved while manually coding everything but it's a lot harder with a higher level of abstraction.

@@ -1,0 +1,120 @@
+\documentclass[mistar]{acmtrans2m}
+\usepackage{graphicx}
+
+% Os seguintes packages so necessrios caso escreva em portugus
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+%
+
+\usepackage{textcomp}
+\usepackage[pdftex]{color}    % color packages
+\usepackage{listings}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+	inputencoding=utf8,
+	numbers=left,
+	numberstyle=\tiny,
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+    basicstyle=\scriptsize,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	frame=single,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	identifierstyle=\ttfamily,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+	extendedchars=\true,
+	captionpos=b,
+	language=Java
+}
+
+\newcommand{\image}[3]
+{
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[width=#1]{#2}
+                \caption{#3}
+                \label{#2}
+        \end{center}
+    \end{figure}
+    % force dump image queue here
+    %\clearpage
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newdef{definition}[theorem]{Definition}
+\newdef{remark}[theorem]{Remark}
+
+%Altere os seguintes dois parmetros.
+%Os parmetros, normalmente nome do autor no primeiro e  ttulo do artigo no segundo, sero inseridos nos cabealhos das pginas pares e mpares respectivamente.
+\markboth{André Lopes Barbosa}{Pattern Based User Interface Generation}
+
+%Nome do Artigo
+\title{Pattern Based User Interface Generation}
+
+ %Autor, em maisculas, e instituio, neste caso Universidade do Minho
+\author{André Lopes Barbosa\\Universidade do Minho}
+
+\begin{abstract}
+The abstract must follow ACM Computing Surveys rules.\\
+``The abstract should be at most 100 words long and consist of short, direct sentences. It should state the objectives of the work, summarize the results, and give the principal conclusions. The title need not be repeated. Because abstracts are extracted and used separately, do not use the first person, do not display mathematics, and do not use citation reference numbers. Try to avoid starting with the words "This paper ..." '' ACM: Information for Authors.
+\end{abstract}
+
+%Categorize o artigo conforme as categorias da ACM.
+%Alguns exemplos de categorias.
+\category{D.2.7}{Software Engineering}{Distribution and Maintenance}
+\category{I.3.1}{Computer Graphics}{Hardware Architecture}
+\category{I.3.7}{Computer Graphics}{Three-Dimensional Graphics and Realism}
+
+%Insira um, ou mais, dos seguintes termos em \terms
+%Algorithms; Design; Documentation; Economics; Experimentation; Human factors; Languages; Legal aspects; Management; Measurement; Performance; Reliability; Security; Standardization; Theory; Veri?cation;
+\terms{Documentation, Human factors, Reliability, Standardization}
+
+ %palavras chaves
+\keywords{Software Engineering, User interface, Patterns, Human computer interaction}
+
+\begin{document}
+\setcounter{page}{1}%Alterar "1" para a pgina a ser indicada pela equipa do DI-RPD.
+
+\begin{bottomstuff}
+pg17322@alunos.uminho.pt
+\end{bottomstuff}
+
+\maketitle
+
+\section{Introduction}
+...
+
+\input{content/how_user_interfaces_are_built}
+\input{content/patterns_in_software_engineering}
+\input{content/how_to_specify_user_interface_patterns}
+
+\section{Conclusions}
+...
+
+%Bibliografia
+\bibliography{DI-MPTR}%substituir o parmetro "bibtext" pelo nome do ficheiro (sem extenso) que contm a bibliografia BibTex
+\bibliographystyle{acmtrans}
+
+
+\begin{received}
+\end{received}
+\end{document}
+
+
