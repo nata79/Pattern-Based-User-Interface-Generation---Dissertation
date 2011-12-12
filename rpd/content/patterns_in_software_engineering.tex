@@ -1,3 +1,23 @@
 \section{Patterns in software engineering}
-Exemplo dos design patterns. Geração de código a partir de padrões.
-Estado da arte no que toca a padrões de interfaces.
+Patterns are widely used in every field of engineering. One of the earlier definitions of patterns can be found on \cite{A_Pattern_Language_Towns_Buildings_Construction}. Almost twenty years later patterns were brought to software engineering by \cite{Design_Patterns}.
+
+Patterns bring many advantages, not only they make the development of a product less time consuming and thus less expensive but can also guarantee a higher level of quality because patterns are solutions that have been tested and used in other projects.
+
+Particularly on user interfaces, these are very important features because building a good user interface is a very complex and time consuming process. On most software projects it takes about half of the time frame allocated to that project, so patterns can help to make this process more efficient. Also there's the problem of usability. This is one of the most important aspects of software projects but its still very difficult to build a user interface compliant with HCI\footnote{human computer interaction} rules. By using patterns this can be easily achieved if the patterns are already compliant with these rules.
+
+\subsection{How are patterns documented}
+Patterns are usually stored in catalogues (websites, books, etc...). In \cite{Design_Patterns} a pattern is composed by the following fields:
+\begin{itemize}
+\item The \textbf{Pattern name} resumes the pattern in one or two words that we use to refer to named pattern.
+\item The \textbf{Problem} describes in which situations the pattern should be applied.
+\item The \textbf{Solution} describes how the pattern work, what elements it has and how they relate to each other.
+\item The \textbf{Consequences} describe the secondary effects of using the pattern.
+\end{itemize}
+This is the specification used for software design patterns but its generic enough be used in other contexts.
+In \cite{Generative_pattern-based_design_of_user_interfaces} documentation of patterns is divided in two categories. First there are descriptive patterns. These patterns are meant to be interpreted by humans so they describe the solution in a generic way so that the pattern can be used in a wide range of contexts. Then there are generative patterns. These ones maximize \textit{expressivity} over \textit{genericity} thus, they can be used in more restricted range of contexts but the solution is specific enough to be interpreted by machines. 
+
+Design patterns like the ones described in \cite{Design_Patterns} are generative patterns because they're solution is specified in UML which is a formal language that can easily interpreted by machines to perform transformations.
+
+A list of catalogues for user interfaces can be found in \cite{The_Interaction_Design_Patterns_Page}. Most of this catalogues define they're solutions with text and images because there isn't a reference language to specify user interfaces. Thus most of these patterns are descriptive patterns that can only be used by humans.
+
+In conclusion, in order to take full advantage of patterns we need a way to document them. Generative patterns are the most useful in the context of this project but to use them we need to find a language to specify these patterns so that they can be interpreted by a machine to generate a concrete user interface.
