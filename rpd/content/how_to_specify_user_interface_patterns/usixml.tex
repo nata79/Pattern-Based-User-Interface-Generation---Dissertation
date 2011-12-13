@@ -1,0 +1,18 @@
+\subsection{UsiXML}
+UsiXML is a user interface description language aimed at expressing user interfaces built with various modalities of interaction and independently of them. UsiXML is XML compliant to enable flexible exchange of information and powerful communication between models and tools used in user interface engineering \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}. UsiXML is specified in UML, as seen on image \ref{content/how_to_specify_user_interface_patterns/usixml_uml.png}.
+\image{12cm}{content/how_to_specify_user_interface_patterns/usixml_uml.png}{UsiXML specified as a UML class diagram.}
+The core component of a user interface specified in UsiXML consists on the user interface model, which is itself composed by several models namely:
+\begin{itemize}
+\item \textbf{Transformation model}:  Contains a set of rules in order to enable a transformation of one specification to another.
+\item \textbf{Domain model}: Describes the classes of the objects manipulated by the users while interacting with the system.
+\item \textbf{Task model}: describes the interactive task as viewed by the user interacting with the system. The task model is expressed according to the CTT specification \cite{ConcurTaskTrees_A_Diagrammatic_Notation_for_Specifying_Task_Models}.
+\item \textbf{Abstract user interface model}: represents the view and behavior of the domain concepts and functions in platform independent way.
+\item \textbf{Concrete user interface model}: represents a concretization of the abstract user interface model.
+\item \textbf{Mapping model}: contains a series of related mappings between models or elements of models.
+\item \textbf{Context model}: describes the three aspects of a context of use, which is a user carrying out an interactive task using a specific computing platform in a given surrounding environment.
+\item \textbf{Resource model}: contains definitions of resources attached to abstract or concrete interaction objects.
+\end{itemize}
+
+The user interface model consists of a list of component models (described above) in any order and any number. It doesn't need to include one of each model component and there can be more than one of a particular kind of model component. It's also composed by a creation date, a list of modification dates, a list of authors and a schema version.
+
+The objective of studying UsiXML was to find out if it was suitable to specify user interface patterns. After analyzing all its components we can conclude that it's indeed suitable to describe the solution of a pattern, that will be, basically, an abstract user interface model, but there's no space for the descriptive components of a pattern. In conclusion, to successfully specify a pattern in UsiXML we need an extension that stores all the extra information needed to make a pattern recognizable by humans.
