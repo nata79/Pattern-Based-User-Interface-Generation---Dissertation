@@ -1,11 +1,17 @@
 \subsection{Manually coding user interfaces}
-Before there were more advanced tools user interfaces were coded manually, like everything else. Nowadays although we have these tools, most developers still think this is the best way because it gives them more control over their work.
+Before more advanced tools were created, user interfaces had to be manually coded. Although the evolution that the industry has suffered since the beginnings, most developers still prefer to code manually user interfaces because it gives them more control over their work.
 
-This is a very time consuming technique because humans have to do most of the work but in the end it really depends on what language or framework you're working on. Most popular and modern programming languages give developers access to frameworks for building GUI's\footnote{Graphical user interface.} like GTK+, Swing or Windows Forms. These examples are for the desktop side. On the web side everything is (X)HTML, CSS and JavaScript but there are a lot of frameworks to abstract from these languages like JSF , Struts or ASP.net.
+This is a very time consuming technique because humans have to do most of the work but in the end it really depends on what language or framework you're working on. Most popular and modern programming languages give developers access to frameworks for building graphical user interfaces (GUI) like GTK+\footnote{http://www.gtk.org/}, Swing\footnote{http://docs.oracle.com/javase/tutorial/uiswing/} or Windows Forms\footnote{http://msdn.microsoft.com/en-us/library/dd30h2yb.aspx}. These examples are for the desktop side. On the web side everything is (X)HTML, CSS and JavaScript but there are a lot of frameworks to abstract from these languages like JSF\footnote{http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html}, Struts\footnote{http://struts.apache.org/} or ASP.net\footnote{http://www.asp.net/}.
+
 Most desktop GUI frameworks use the same language for views and the other software layers. This means that a lot of code has to be written In order to get things done. Frameworks like GTK+, Swing and Windows forms are very hard to use without help from more advanced tools.
-Let's take a look at simple Swing example that shows a basic login window.
+
+Figure \ref{content/how_user_interfaces_are_built/login_window.png} shows a simple login window with two textboxes for username and password and a couple of buttons to login or cancel the operation.
+\image{6cm}{content/how_user_interfaces_are_built/login_window.png}{Login window}
+
+On listing \ref{Login_window_using_Swing_coded_manually} we can see the code written to build this window using swing. Additional information about swing can be found in \cite{Java_Swing}
+
 \lstset{language=Java}
-\begin{lstlisting}[caption={Login window using Swing, coded manually}]
+\begin{lstlisting}[caption={Login window using Swing, coded manually},label=Login_window_using_Swing_coded_manually]
 public static void main(String[] args) {
         SwingManualTest sm = new SwingManualTest();
         sm.showLoginWindow();
@@ -25,11 +31,11 @@ public static void main(String[] args) {
         setVisible(true);
     }
 \end{lstlisting}
-It's plain Java so every control is an object. For some OOP\footnote{Object oriented programming.} enthusiasts this is a good thing but it's incomprehensible for designers and even for most developers this is very hard and thus very time consuming.
+It's plain Java so every control is an object. For some object oriented programming (OOP) enthusiasts this is a good thing but it's incomprehensible for designers and even for most developers this is very hard and thus very time consuming.
 
-Fortunately, on the web side things are simpler. Most frameworks use HTML with some specific extensions to specify the views. This offer developers a more declarative paradigm which makes a lot more sense when building interfaces. This approach also produces a lot less code which makes maintenance a lot easier. Let's take a look at an example similar to the previous one but this time using JSF\footnote{Java server faces.}.
+Fortunately, on the web side things are simpler. Most frameworks use HTML with some specific extensions to specify the views. This offer developers a more declarative paradigm which makes a lot more sense when building interfaces. This approach also produces a lot less code which makes maintenance a lot easier. Listing \ref{Login_window_using_JSF} shows the code to build the login window using JSF. Additional information about JSF can be found in \cite{Mastering_JavaServer_Faces}.
 \lstset{language=HTML}
-\begin{lstlisting}[caption={Login window using JSF}]
+\begin{lstlisting}[caption={Login window using JSF}, label=Login_window_using_JSF]
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
@@ -47,9 +53,9 @@ Fortunately, on the web side things are simpler. Most frameworks use HTML with s
     </h:body>
 </html>
 \end{lstlisting}
-This is very different than the first example. It's not just more intuitive for developers, it's a little bit more understandable for designers too because it's based on HTML. 
+This is very different from the first example. With JSF, views are specified in a specific language. This makes the code more readable and easier to maintain.
 
-Recently have been developed new frameworks for desktop GUI's that resemble the web ones that were referenced earlier. One good example is the WPF\footnote{Windows Presentation Foundation.} framework. It uses the XAML\footnote{Extensible Application Markup Language.} language to specify views. It's a markup language based on XML\footnote{Extensible Markup Language.} and, thus, more like HTML. Let's take a look at the login window coded for WPF.
+Recently have been developed new frameworks for desktop GUI's that resemble the web ones that were referenced earlier. One good example is WPF\footnote{http://msdn.microsoft.com/en-us/library/aa970268.aspx}. It uses XAML\footnote{http://msdn.microsoft.com/en-us/library/ms752059.aspx} to specify views. It's a markup language based on XML and, thus, more similar to HTML than a programming language like Java or C\#. Let's take a look at the login window coded for WPF. Additional information about WPF and XAML can be found in \cite{WPF_in_Action_with_Visual_Studio_2008}.
 \lstset{language=XML}
 \begin{lstlisting}[caption={Login window using WPF}]
 <Window x:Class="WpfApplication1.MainWindow"

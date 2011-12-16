@@ -1,5 +1,6 @@
 \subsection{UsiXML}
-UsiXML is a user interface description language aimed at expressing user interfaces built with various modalities of interaction and independently of them. UsiXML is XML compliant to enable flexible exchange of information and powerful communication between models and tools used in user interface engineering \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}. UsiXML is specified in UML, as seen on image \ref{content/how_to_specify_user_interface_patterns/usixml_uml.png}.
+\label{subsection:UsiXML}
+UsiXML is a user interface description language aimed at expressing user interfaces built with various modalities of interaction and independently of them. UsiXML is XML compliant to enable flexible exchange of information and powerful communication between models and tools used in user interface engineering \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}. UsiXML is specified in UML, as seen on image \ref{content/how_to_specify_user_interface_patterns/usixml_uml.png}. One of the great advantages of UsiXML is platform independence providing a multi-path development of user interfaces \cite{UsiXML_a_Language_Supporting_Multi-Path_Development_of_User_Interfaces}.
 \image{12cm}{content/how_to_specify_user_interface_patterns/usixml_uml.png}{UsiXML specified as a UML class diagram.}
 The core component of a user interface specified in UsiXML consists on the user interface model, which is itself composed by several models namely:
 \begin{itemize}
@@ -15,4 +16,8 @@ The core component of a user interface specified in UsiXML consists on the user 
 
 The user interface model consists of a list of component models (described above) in any order and any number. It doesn't need to include one of each model component and there can be more than one of a particular kind of model component. It's also composed by a creation date, a list of modification dates, a list of authors and a schema version.
 
-The objective of studying UsiXML was to find out if it was suitable to specify user interface patterns. After analyzing all its components we can conclude that it's indeed suitable to describe the solution of a pattern, that will be, basically, an abstract user interface model, but there's no space for the descriptive components of a pattern. In conclusion, to successfully specify a pattern in UsiXML we need an extension that stores all the extra information needed to make a pattern recognizable by humans.
+The objective of studying UsiXML was to find out if it was suitable to specify user interface patterns. After analyzing all its components we can conclude that it's indeed suitable to describe the solution of a pattern. The pattern specification fit in the task, abstract user interface and context models. The domain and mapping models will be used to link the model with the source code that as already been written.
+
+%, that will be, basically, an abstract user interface model, but there's no space for the descriptive components of a pattern. 
+
+%In conclusion, to successfully specify a pattern in UsiXML we need an extension that stores all the extra information needed to make a pattern recognizable by humans.
