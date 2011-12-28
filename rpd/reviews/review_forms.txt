@@ -1,0 +1,250 @@
+﻿*** REVIEW FORM ID: 868112::464233
+*** SUBMISSION NUMBER: 23
+*** TITLE: Specification and Implementation of a Workflow Engine
+*** AUTHORS: José Azevedo
+*** PC MEMBER: André Barbosa
+--------------------------------------------------------------
+*** REVIEW:
+---  Please provide a detailed review, including justification for
+---  your scores. This review will be sent to the authors unless
+---  the PC chairs decide not to do so. This field is required.
+
+O artigo apresenta uma proposta de extensão ao Weebox, um software para gestão de documentos já existente no mercado desenvolvido pela Keep Solutions. A extensão em questão vai tratar da criação de um workflow para criação de documentos gerindo as suas fases a partir de um conjunto de regras, permissões, caminhos e tarefas.
+
+O revisor tem experiência em várias áreas ligadas à informática e ao desenvolvimento de aplicações. Tendo já desenvolvido várias aplicações web com recurso a servidores aplicacionais e outras tecnologias referidas no artigo, encontro-me familiarizado com a maioria dos termos técnicos usados.
+Não possui, no entanto, qualquer experiência com o software Weebox.
+
+A primeira reação a este artigo é negativa, essencialmente pelo formato escolhido que não faz uso do template proposto, não tem numeração nas páginas e apresenta demasiado espaço em branco.
+
+Como ponto forte, para este artigo destaco o facto de ser curto, facilitando assim a sua leitura. O objectivo também parece minimamente claro. Não entra em muitos pormenores mas dá para ter uma visão sobre o produto que se propõe a desenvolver.
+
+Em seguida enumero uma série de pontos que considero falhas no artigo e devem ser corrigidos:
+- Ausência completa de referências.
+- A descrição do Weebox devia ser mais detalhada. Logo a primeira frase do artigo diz “The Weebox is a document management system developed by KEEP SOLUTIONS whose main objective is simple to install, maintain and use.” é feita muita referência ao facto da aplicação ser simples de usar, manter e instalar. Embora estas possam ser vantagens competitivas importantes, não deve ser este o foco do artigo pois não dá para perceber exactamente quais são as funcionalidades desta aplicação.
+- Não existe um estudo sobre o estado da arte. Devia ser feita referência a outras aplicações com objectivos iguais ou semelhantes que devem existir no mercado.
+- Existem alguns erros de linguagem, por exemplo, existe uma secção com o título “COMUNICAÇÕES” quando todo o artigo está escrito em inglês.
+- Vários erros no que toca ao formato do documento. Não tem numeração nas paginas, as imagens não têm legenda e não foi utilizado o template proposto pela equipa docente.
+
+Em conclusão, este artigo deve ser revisto com bastante cuidado para não repetir os mesmos erros. Aconselho o autor a dar prioridade ao uso do template proposto e à criação uma base de referências bibliográficas que ofereçam credibilidade ao artigo. No entanto todos os tópicos discutidos em cima são relevantes e merecedores de alguma atenção.
+
+--------------------------------------------------------------
+*** REMARKS FOR THE PROGRAMME COMMITTEE:
+---  If you wish to add any remarks for PC members, please write
+---  them below. These remarks will only be used during the PC
+---  meeting. They will not be sent to the authors. This field is
+---  optional.
+
+--------------------------------------------------------------
+--- If the review was written by (or with the help from) a
+--- subreviewer different from the PC member in charge, add
+--- information about the subreviewer in the form below. Do not
+--- modify the lines beginning with ***
+*** REVIEWER'S FIRST NAME: (write in the next line)
+
+*** REVIEWER'S LAST NAME: (write in the next line)
+
+*** REVIEWER'S EMAIL ADDRESS: (write in the next line)
+
+--------------------------------------------------------------
+--- In the evaluations below, uncomment the line with your
+--- evaluation or confidence. You can also remove the
+--- irrelevant lines
+*** OVERALL EVALUATION:
+
+---  3 (strong accept)
+---  2 (accept)
+---  1 (weak accept)
+---  0 (borderline paper)
+---  -1 (weak reject)
+  -2 (reject)
+---  -3 (strong reject)
+
+*** REVIEWER'S CONFIDENCE:
+
+---  4 (expert)
+  3 (high)
+---  2 (medium)
+---  1 (low)
+---  0 (null)
+
+*** END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--- For your convenience, this form can be processed by EasyChair
+--- automatically. You can fill out this form offline and then
+--- upload it to EasyChair. Several review forms can be uploaded
+--- simultaneously. You can modify your reviews as many times as
+--- you want.
+--- When filling out the review form please mind
+--- the following rules:
+--- (1) Lines beginning with --- are comments. EasyChair will
+---     ignore them. Do not start lines in your review with ---
+---     as they will be ignored. You can add comments to the
+---     review form or remove them
+--- (2) Lines beginning with *** are used by EasyChair. Do not
+---     remove or modify these lines or the review will become
+---     unusable and will be rejected by EasyChair
+--------------------------------------------------------------
+*** REVIEW FORM ID: 868278::464233
+*** SUBMISSION NUMBER: 38
+*** TITLE: Management of a physical archive
+*** AUTHORS: Nuno Marques
+*** PC MEMBER: André Barbosa
+--------------------------------------------------------------
+*** REVIEW:
+---  Please provide a detailed review, including justification for
+---  your scores. This review will be sent to the authors unless
+---  the PC chairs decide not to do so. This field is required.
+
+O artigo apresenta uma proposta para extensão do software DigitArq, uma solução para gestão de arquivos digitais. A extensão proposta faz o mapeamento entre o mundo digital e o físico permitindo assim a gestão de arquivos físicos.
+
+O revisor tem experiência em várias áreas ligadas à informática e ao desenvolvimento de aplicações. Não possuo, no entanto, qualquer experiência na área dos arquivos ou na utilização do sftware DigitAqrq.
+
+A primeira impressão do artigo é positiva. O formato exigido foi respeitado e utilizou o template proposto pela equipa docente. O resumo parece ilustrar bem o tema, excepto ao usar o termo “fonds” que não é claro para um leitor que não está familiarizado com o tema.
+
+O documento encontra-se bem estruturado. A introdução toca nos assuntos principais sem ser demasiado extensa e termina com uma referência à estrutura do documento o que me parece bastante positivo. Os objectivos são bastante claros e são um ponto positivo para o artigo. Tem citações ao longo do texto e boas referências (se calhar devia ter mais).
+
+Em seguida enumero uma série de pontos que considero falhas no artigo e devem ser corrigidos:
+- O termo fonds aparece muitas vezes no documento (incluindo no resumo) mas só é explicado o seu significado na secção State of the Art, devia ser introduzido o termo logo na introdução.
+- Nem sempre é claro o que é que já existe e o que vai ser feito, por exemplo no segundo parágrafo da secção “Future Work” diz que vão ser usadas as funcionalidades já existentes que fazem o mapeamento com espaços físicos, no início do documento tinha a ideia que estas funcionalidades iriam ser desenvolvidas.
+- A secção de motivação pode ser melhorada, no quarto parágrafo já é descrita uma solução enquanto o quito poderia passar para a introdução.
+- Na secção “State of the Art” devia falar de soluções alternativas, por exemplo o software usado na biblioteca da UM.
+- A secção 4.1 tem muita história e torna o documento difícil de ler.
+- A primeira frase da secção 4.1.2 é muito longa (8 linhas) e devia ser reformulada pois não se consegue perceber o seu sentido.
+- O estilo usado para citações torna-as muito longas, por exemplo na página 5 tem uma citação que ocupa 2 linhas.
+- A secção 4.3 faria mais sentido na introdução.
+
+Em conclusão o artigo está bom. Tem alguns pontos onde pode melhorar, essencialmente deve ser mais específico sobre qual vai ser a contribuição. No fim de ler fiquei com algumas duvidas se o mapeamento entre o espaço digital e físico será desenvolvido agora ou se já existe.
+
+--------------------------------------------------------------
+*** REMARKS FOR THE PROGRAMME COMMITTEE:
+---  If you wish to add any remarks for PC members, please write
+---  them below. These remarks will only be used during the PC
+---  meeting. They will not be sent to the authors. This field is
+---  optional.
+
+--------------------------------------------------------------
+--- If the review was written by (or with the help from) a
+--- subreviewer different from the PC member in charge, add
+--- information about the subreviewer in the form below. Do not
+--- modify the lines beginning with ***
+*** REVIEWER'S FIRST NAME: (write in the next line)
+
+*** REVIEWER'S LAST NAME: (write in the next line)
+
+*** REVIEWER'S EMAIL ADDRESS: (write in the next line)
+
+--------------------------------------------------------------
+--- In the evaluations below, uncomment the line with your
+--- evaluation or confidence. You can also remove the
+--- irrelevant lines
+*** OVERALL EVALUATION:
+
+---  3 (strong accept)
+  2 (accept)
+---  1 (weak accept)
+---  0 (borderline paper)
+---  -1 (weak reject)
+---  -2 (reject)
+---  -3 (strong reject)
+
+*** REVIEWER'S CONFIDENCE:
+
+---  4 (expert)
+---  3 (high)
+  2 (medium)
+---  1 (low)
+---  0 (null)
+
+*** END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--- For your convenience, this form can be processed by EasyChair
+--- automatically. You can fill out this form offline and then
+--- upload it to EasyChair. Several review forms can be uploaded
+--- simultaneously. You can modify your reviews as many times as
+--- you want.
+--- When filling out the review form please mind
+--- the following rules:
+--- (1) Lines beginning with --- are comments. EasyChair will
+---     ignore them. Do not start lines in your review with ---
+---     as they will be ignored. You can add comments to the
+---     review form or remove them
+--- (2) Lines beginning with *** are used by EasyChair. Do not
+---     remove or modify these lines or the review will become
+---     unusable and will be rejected by EasyChair
+--------------------------------------------------------------
+*** REVIEW FORM ID: 868507::464233
+*** SUBMISSION NUMBER: 53
+*** TITLE: System for managing and sharing scientific publications within research groups
+*** AUTHORS: José Dias
+*** PC MEMBER: André Barbosa
+--------------------------------------------------------------
+*** REVIEW:
+---  Please provide a detailed review, including justification for
+---  your scores. This review will be sent to the authors unless
+---  the PC chairs decide not to do so. This field is required.
+
+O artigo apresenta uma proposta para desenvolver uma aplicação que facilita o processo de escrita de artigos científicos ao fazer uma gestão automática de referências e gestão de versões para auxiliar na escrita colaborativa.
+
+O revisor tem experiência em várias áreas ligadas à informática e ao desenvolvimento de aplicações. Estando actualmente inserido em projectos de escrita cientifica, tenho facilidade em reconhecer os problemas reais que existem neste processo.
+
+Numa primeira impressão, o artigo apresenta algumas falhas no que toca ao formato pretendido. O número de páginas fica abaixo do recomendado e só não é inferior por causa das consecutivas quebras de página que deixam o artigo com muito espaço em branco.
+ 
+Como ponto forte destaco o resumo que é claro. Dá para perceber o objectivo da dissertação e as categorias e palavras chave fazem sentido e refletem o tema da tese.
+
+Em seguida enumero uma série de pontos que considero falhas no artigo e devem ser corrigidos:
+- Mais do que uma vez é usado o tempo futuro no lugar do presente. Logo na quarta linha do resumo está escrito “The objective of this dissertation will be to study” quando se deveria ler “The objective of this dissertation is to study”.
+- A motivação começa bem mas todos os problemas apresentados são resolvidos por ferramentas que já existem à muito tempo. Não dá para perceber a razão de desenvolver uma nova.
+- Nos objectivos dá para perceber o tipo de aplicação que vai ser desenvolvida mas sem grandes detalhes.
+- O estado da arte é muito superficial, por exemplo na secção “Papers” diz que foi recentemente lançada uma nova versão desta ferramenta com funcionalidades que a enriqueceram. No entanto não é referida nenhuma dessas funcionalidades.
+- O estado da arte apenas aborda ferramentas que fazem a gestão de referências e nenhuma que permita a escrita colaborativa de documentos ou gestão de versões.
+- A secção 4 mostra o plano de trabalhos para a tese de mestrado. Faria sentido referir o trabalho futuro, no entanto, começa logo por referir o trabalho, que já deve estar feito, a ser realizado para o artigo em questão.
+- A única conclusão é que não existe nenhuma ferramenta igual. Poderiam ser mencionadas algumas vantagens em relação a produtos substitutos que efectivamente existem mas não foram referidos em qualquer parte do documento.
+- Não tem nenhuma citação no texto todo.
+- Só constam referências web.
+
+Em conclusão, este artigo deve ser revisto de forma profunda. Aconselho o autor a investir mais tempo no estudo de produtos substitutos ao que está a propor (especialmente na área de gestão de versões). As referências deviam ter melhor qualidade e todo o documento deveria ser bem mais aprofundado. Se não fosse todo o espaço branco, o artigo, provavelmente, não teria mais que 5 páginas.
+
+--------------------------------------------------------------
+*** REMARKS FOR THE PROGRAMME COMMITTEE:
+---  If you wish to add any remarks for PC members, please write
+---  them below. These remarks will only be used during the PC
+---  meeting. They will not be sent to the authors. This field is
+---  optional.
+
+--------------------------------------------------------------
+--- If the review was written by (or with the help from) a
+--- subreviewer different from the PC member in charge, add
+--- information about the subreviewer in the form below. Do not
+--- modify the lines beginning with ***
+*** REVIEWER'S FIRST NAME: (write in the next line)
+
+*** REVIEWER'S LAST NAME: (write in the next line)
+
+*** REVIEWER'S EMAIL ADDRESS: (write in the next line)
+
+--------------------------------------------------------------
+--- In the evaluations below, uncomment the line with your
+--- evaluation or confidence. You can also remove the
+--- irrelevant lines
+*** OVERALL EVALUATION:
+
+---  3 (strong accept)
+---  2 (accept)
+---  1 (weak accept)
+---  0 (borderline paper)
+---  -1 (weak reject)
+  -2 (reject)
+---  -3 (strong reject)
+
+*** REVIEWER'S CONFIDENCE:
+
+---  4 (expert)
+  3 (high)
+---  2 (medium)
+---  1 (low)
+---  0 (null)
+
+*** END
+--------------------------------------------------------------
