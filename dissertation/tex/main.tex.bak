@@ -1,0 +1,81 @@
+%\documentclass[mistar]{acmtrans2m}
+\documentclass[a4paper,12pt,notitlepage,twoside,openright]{report}
+\usepackage{thesis}
+
+\linespread{1.3} % 1.3 -> ``one and a half''; 1.6 double
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{	Pattern based user interface generation }
+
+\author{
+	André Barbosa
+	\\Universidade do Minho
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} 
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Thank you very much everybody! :D
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%\maketitle
+\begin{abstract}
+Fake! Tudo Fake!
+\end{abstract}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\selectlanguage{portuguese}
+%\begin{center}
+%\LARGE
+%\doublespacing
+%Visualização Realista e Interativa de Materiais Complexos
+%\normalsize
+%\end{center}
+%\vspace{15mm}
+
+\begin{abstract}
+Fuck you that's why!
+\end{abstract}
+
+\cleardoublepage
+\selectlanguage{english}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+%\setcounter{page}{6}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\input{./tex/introduction}
+%\input{./tex/conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%Bibliography
+\bibliography{thesis}{}
+\bibliographystyle{alpha}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{acmtrans}
+%\nocite{*}
+
+\end{document}

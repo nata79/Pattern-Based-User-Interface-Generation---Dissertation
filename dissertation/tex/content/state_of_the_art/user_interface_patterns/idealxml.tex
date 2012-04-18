@@ -1,0 +1,29 @@
+\subsection{IdealXML}
+\label{subsection:IdealXML}
+
+IdealXML\cite{IdealXml_An_Interaction_Design_Tool, idealxml2} is an experience-based environment for user interface design. Experience is the accumulation of knowledge or skills that result from direct participation in events or activities. Developers have a strong tendency to towards reusing designs that worked well for them in the past. Unfortunately, this design reuse is usually limited by personal experience, and there is usually few sharing of knowledge among developers.
+
+IdealXML manipulates a pattern repository, where patterns are organized following a hierarchical structure. At the top, this structure has different models related with a MB-UIDE: domain, task, presentation and mapping, context and user models are left for future work. IdealXML is shipped with a predefined collection of patterns from a variety of sources. These patterns are the initial base of knowledge.
+
+IdealXML is an MB-UIDE and designers can, using several graphical notations, specify domain models, task models, abstract presentation models and mapping models between them. Some of these models are stored in the pattern repository and new ones can always be added.
+
+IdealXML also allows for the animation of a task model to generate a hi-fi prototype of the future user interface while still in the first development stages. This is achieved by using CTT, UsiXML and a set of heuristics to transform the task model specification into an abstract UI.
+
+Prototyping consists in the creation of a preliminary version of the future UI (prototype) so that the user and the experts can find possible problems in the design of the UI, both from the functional and from the usability points of view. Prototyping techniques fall into two main categories:
+\begin{itemize}
+\item \textbf{Lo-fi:} this family of techniques is mostly used in requirements analysis stage to validate the requirements with the user in user-centred approaches.
+
+\item \textbf{Hi-fi:} they are aimed at the creation of preliminarily versions of the UI with an acceptable degree of quality. This kind of techniques produces a UI prototype which is closer to final future one.
+\end{itemize}
+
+Abstract prototyping was devised because it was found that the sooner developers started drawing realistic pictures or positioning real widgets, the longer it took them to converge on a good design.
+
+As it was mentioned above, IdealXML uses a set of heuristics to transform the task model into an abstract interface model:
+\begin{itemize}
+\item Each cluster of interrelated task cases becomes an interaction space in the navigation map, so an abstract task is a container.
+\item A container also can be an interaction task or an application task in a hierarchical task decomposition.
+\item A component rises when an interaction or application task is found in a hierarchical task decomposition.
+\item A component can have several facets (input, output, control and navigation). These facets allow the user to interact with the system.
+\end{itemize}
+
+The animation of the abstract user interface that resulted from the designed task model is grounded in the identification of the enabled task set (ETS). Having identified the ETC for a task model, the next step is to identify the effects of performing each task in each ETS. The result of this analysis is  a state and transitions occur when tasks are performed. In IdealXML's proposal, the task model specification is split into states. Each state is a set of interrelated tasks, including temporal relationships between those tasks, usually connected to an essential use case.

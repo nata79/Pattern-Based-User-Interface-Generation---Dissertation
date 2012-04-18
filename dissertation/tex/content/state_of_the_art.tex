@@ -1,0 +1,35 @@
+\chapter{State of the art}
+In this chapter is described the state art regarding model driven development of user interfaces. It will be presented several techniques to develop user interfaces using model driven principles. There is significant ongoing research in this field since the late 1980s. This chapter makes a short summary of that research. Some works will be examined more depth for the sake of example. 
+
+Model driven development defining characteristic is that software development's primary focus and products are models rather than computer programs. The major advantage of this is that we express models using concepts that are much less bound to the underlying implementation technology and are much closer to the problem domain relative to most popular programming languages \cite{The_Pragmatics_of_Model-Driven_Development}.
+
+Models are easier to maintain than the code itself and, most importantly, they're platform independent. This means that the same model can be used to generate code that runs on a desktop environment, a web environment or even a mobile environment. This makes a a very important feature for user interfaces because modern applications are becoming more and more ubiquitous and it's highly complex and time consuming to build a user interface for every supported platform.
+
+There are different kinds of models and several techniques to model user interfaces. Some tools like JANUS\cite{janus} only require a domain model to generate a concrete user interface while others like TRIDENT\cite{trident1, trident2} and ADEPT\cite{adept1} also use a task model. All these approaches automate part of the development process. Other approaches like ITS\cite{ITS} require more work from the developers because it doesn't generate any model.
+
+Some more recent work have been using different techniques to generate user interfaces. GADGET\cite{gadget} or Supple\cite{supple} have been using optimization techniques to generate better concrete user interfaces
+
+Patterns are widely used in every field of engineering. One of the earlier definitions of patterns can be found on \cite{A_Pattern_Language_Towns_Buildings_Construction}. Almost twenty years later patterns were brought to software engineering by \cite{Design_Patterns}.
+
+Patterns bring many advantages, not only they make the development of a product less time consuming and thus less expensive but can also guarantee a higher level of quality because patterns are solutions that have been tested and used in other projects. IdealXML\cite{IdealXml_An_Interaction_Design_Tool, idealxml2} is a tool that helps developers to take advantage of patterns while developing user interface models.
+
+Although there have been a lot of academic work surrounding model driven development of user interfaces, this work is struggling to be adopted by the industry. There are some theories for what is missing, in \cite{molina} is said that better tool support is needed and in \cite{IdealXml_An_Interaction_Design_Tool} is stated that a common language for representing user interface models is the next step.
+
+UML \cite{The_Unified_Modeling_Language_Reference_Manual} is the industry standard for software modelling but, unfortunately, is not fit to model user interfaces. Fortunately, the software engineering community has developed some new modelling languages in the past few years to overcome this problem. UMLi \cite{User_Interface_Modeling_in_UMLi} is an extension to UML that provides an alternative diagram notation for describing abstract interaction objects. ConcurTaskTrees (CTT) \cite{ConcurTaskTrees_A_Diagrammatic_Notation_for_Specifying_Task_Models} aims at task modelling by dividing the task model is built in three essential parts:
+\begin{itemize}
+\item First a hierarchical logical decomposition of the tasks represented by a tree-like structure;
+\item Then an identification of the temporal relationships among tasks at the same level;
+\item And finally an identification of the objects associated with each task and of the actions which allow them to communicate with each other.
+\end{itemize} 
+
+UsiXML is a user interface description language aimed at expressing user interfaces built with various modalities of interaction and independently of them. UsiXML is XML compliant to enable flexible exchange of information and powerful communication between models and tools used in user interface engineering \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}. One of the great advantages of UsiXML is platform independence providing a multi-path development of user interfaces \cite{UsiXML_a_Language_Supporting_Multi-Path_Development_of_User_Interfaces}. UsiXML characteristics and features give it the potential to become a standard for modelling user interfaces like UML is for software architecture.
+
+There is a lot of work regarding model driven development for user interfaces and the idea that models can simplify the development process is becoming more consensual. Section \ref{section:ITS} describes the ITS project, one of the firsts in this field. 
+
+Section \ref{section:optimization_based_generation_of_interfaces} will describe optimization based techniques and the GADGET and Supple projects will be examined with more depth.
+
+Section \ref{section:user_interface_patterns} refers to the usage of patterns in user interface design . This section also includes an analysis of IdealXML, a knowledge based tool for designing user interfaces.
+
+\input{content/state_of_the_art/its}
+\input{content/state_of_the_art/optimization_based_generation_of_interfaces}
+\input{content/state_of_the_art/user_interface_patterns}

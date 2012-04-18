@@ -1,0 +1,115 @@
+\ProvidesPackage{thesis}
+
+\usepackage{graphicx}
+\usepackage{aeguill} %looks better on pdf
+
+\usepackage{parskip}
+%\setlength{\parskip}{1cm plus4mm minus3mm}
+
+\usepackage{nth}
+\usepackage{indentfirst}
+\usepackage{subfigure}
+%\usepackage[all]{hypcap} %link point to the top of the image
+
+\usepackage{fullpage} %smaller margins
+\usepackage{pdfpages} %insert pdf in document
+
+\usepackage{color,soul}
+\usepackage{setspace}
+\usepackage{listings}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\usepackage{multirow}
+\usepackage[portuguese,english]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{framed}
+\usepackage{float}
+\restylefloat{figure}
+\usepackage{textcomp}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\numberwithin{equation}{section}
+
+\renewcommand*\lstlistingname{Code block}
+\lstset{
+	inputencoding=utf8,
+	numbers=left,
+	numberstyle=\tiny,
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+    basicstyle=\scriptsize,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	frame=single,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	identifierstyle=\ttfamily,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+	extendedchars=\true,
+	captionpos=b,
+	language=C
+}
+
+\newcommand{\image}[3]
+{
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[width=#1]{#2}
+                \caption{#3}
+                \label{#2}
+        \end{center}
+    \end{figure}
+    % force dump image queue here
+    %\clearpage
+}
+
+%\lstset{
+%	language=C,
+%	basicstyle=\scriptsize\sffamily,
+%	numbers=left,
+%	stepnumber=1,
+%	numberstyle=\tiny, 
+%	showtabs=false,
+%	tabsize=1,
+%	breaklines=true,
+%	morecomment=[l]{//},
+%	xleftmargin=10mm,
+%	xrightmargin=10mm
+%	}
+
+% -- TODOs
+\newcount\td \td=0 %  to-do counter
+\long \def\Todo#1{\vskip 1ex\noindent\fbox{
+\global\advance\td by 1
+\textbf{To-do (\number\td):}\\~
+\begin{minipage}{.84\textwidth}
+#1
+\end{minipage}
+}\vskip 1ex}
+
+
+\hypersetup{colorlinks,
+            citecolor=black,
+            filecolor=black,
+            linkcolor=black,
+            urlcolor=black
+            }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
