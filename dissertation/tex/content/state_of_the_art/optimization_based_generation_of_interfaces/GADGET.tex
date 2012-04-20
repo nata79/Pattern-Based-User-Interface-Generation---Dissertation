@@ -1,7 +1,7 @@
 \subsection{GADGET}
 \label{subsection:GADGET}
 
-Although optimization-based techniques appear to offer several potential advantages most programmers are intimidated or uncomfortable by the math required to program an optimization. Although optimization tool-kits are available (cite), they typically require substantial specialized knowledge because they have mostly been designed for physics simulations and other traditional optimization problems.
+Although optimization-based techniques appear to offer several potential advantages most programmers are intimidated or uncomfortable by the math required to program an optimization. Although optimization tool-kits are available, they typically require substantial specialized knowledge because they have mostly been designed for physics simulations and other traditional optimization problems.
 
 GADGET provides a set of abstractions for many optimization concepts along with a set of mechanisms to help programmers quickly create optimizations, including an efficient lazy evaluation framework, a powerful and configurable optimization structure, and a library of reusable components.
 A programmer creating an optimization using the GADGET tool-kit needs to supply three essential components: an initializer, iterations and evaluations. The initializer creates the initial solutions to be optimized. This might be based on an existing algorithm, or done randomly. Iterations are responsible to transform one potential solution into another, typically using models that are at least partially random. Finally, evaluations are used to judge the different notions of goodness in a solution.

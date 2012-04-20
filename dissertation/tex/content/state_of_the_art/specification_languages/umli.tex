@@ -1,3 +1,62 @@
 \subsection{UMLi}
 \label{subsection:umli}
 
+Although user interfaces represent an essential part of software systems, UML seems to have been developed with little attention to specific details of user interface models. It's possible to use UML to model important aspects of user interfaces but these models usually get widely unnatural.
+
+UMLi\cite{User_Interface_Modeling_in_UMLi} doesn't try to replace UML entirely. The UMLi meta-model fully integrates with UML this makes possible to integrate UMLi models with other UML models.
+
+It is possible to model abstract and concrete interfaces using class models in UML. However class models don't provide an intuitive representation of the interface. UMLi provides an alternative
+diagram notation for describing abstract interaction objects.
+
+\image{6cm}{content/state_of_the_art/specification_languages/umli_login.png}{Login window modelled in UMLi}
+
+Figure \ref{content/state_of_the_art/specification_languages/umli_login.png} shows an abstract user interface for a login windows modelled in UMLi. The upper container has four entities, \textit{username} and \textit{password} represent input controls while \textit{UsernameParam} and \textit{PasswordParam} are bindings to where the content of inputs will be stored. On the lower container are represented the actions of the window.
+
+UMLi's user interface diagram consists of six constructors:
+\begin{itemize}
+\item \textbf{FreeContainers} rendered as dashed cubes. A \textit{FreeContainer} is a top-level interaction class that no other interaction class can contain.
+
+\item \textbf{Containers} rendered as dashed cylinders. A Container is a mechanism that groups interaction classes other than \textit{FreeContainers}.
+
+\item \textbf{Inputters} rendered as downward triangles. An \textit{Inputter} receives information from users.
+
+\item \textbf{Editors} rendered as rhombi. An Editor facilitates the two-way exchange of information.
+
+\item \textbf{Displayers} rendered as upward triangles. A Displayer sends information to users.
+
+\item \textbf{ActionInvokers} rendered as right-pointing arrows. An \textit{ActionInvoker} receives direct instructions from users.
+\end{itemize}
+
+Tasks are usually represented in a tree notation in which leaf nodes are primitive tasks and non-leaf nodes group and describe relationships between their children nodes. There is a set of three essential features present in most task modelling languages:
+\begin{itemize}
+\item \textbf{Hierarchical decomposition}, high-level tasks systematically decompose into less abstract tasks.
+
+\item \textbf{Temporal relationships}, the order in which a composite task's children are carried out depends on the parent's temporal relation.
+
+\item \textbf{Primitive tasks}, the lowest-level nodes described in the task model are primitive tasks. An action task, for example, corresponds to an activity the application carries out. An interaction task involves some degree of human-computer interaction.
+\end{itemize}
+
+Use cases and activities in UMLi represent the notion of task with a set of features that include all the elementary ones mentioned above.
+
+Using use cases and their scenarios, it's possible to elicit user interface functionalities required to let users achieve their goals. Possible ways to perform actions that support the functionalities elicited using use cases can be identified using activities. Therefore, mapping use cases into top level activities can help describe a set of interface functionalities similar to that described by
+task models in other specification languages.
+
+Use-case diagrams in UMLi are UML use-case diagrams. Activity diagrams in UMLi, however, extend activity diagrams in UML. UMLi provides a notation for a set of macros for activity diagrams that can be used to model behaviour categories usually observed in user interfaces: optional, order independent, and repeatable behaviours.
+
+Using these macro notations, activity diagrams in UMLi can cope better with the tendency that activity diagrams have to become complex even when modelling the behaviour of simple user interfaces.
+
+In order to represent relationships between models in UMLi object flows are used in activity diagrams to describe how to use class instances to perform actions in action states. By using object flows, it's possible to incorporate the notion of state into activity diagrams that are primarily used for modelling behaviour. In UMLi, it's also possible to use object flows to describe how to use interaction class instances. However, object flow states—rendered as dashed arrows connecting objects to action states—have specific semantics when associating interaction objects to activities and action states. UMLi specifies categories of object flow states specific to interaction objects:
+\begin{itemize}
+\item The \textbf{interacts} object flows relate primitive interaction objects to action states, which are primitive activities. They indicate that associated action states are responsible for interactions in which users invoke object operations or visualize the results of object operations.
+
+\item The \textbf{presents} object flows relate \textit{FreeContainers} to activities and specify
+that the associated \textit{FreeContainers} should be visible while the activities are active.
+
+\item The \textbf{confirms} object flows relate \textit{ActionInvokers} to selection states and specify that selection states have finished normally.
+
+\item The \textbf{cancels} object flows relate \textit{ActionInvokers} to composite activities or selection states and specify that activities or selection states have not finished normally and that the application flow of control should be rerouted to a previous state.
+
+\item The \textbf{activates} object flows relate \textit{ActionInvokers} to other activities, thereby triggering the associated activities that start when an event occurs.
+\end{itemize}
+
+In \cite{User_Interface_Modeling_in_UMLi} is mentioned a case study specified both in UML and UMLi. A set of metrics were applied to each specification. The results of these metrics show that constructing and maintaining interactive system models should be simpler and easier in UMLi than in UML.

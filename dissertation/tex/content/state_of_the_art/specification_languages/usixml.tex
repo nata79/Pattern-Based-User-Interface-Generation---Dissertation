@@ -1,3 +1,39 @@
 \subsection{UsiXML}
 \label{subsection:usixml}
 
+UsiXML (USer Interface eXtensible Markup Language) is a User Interface Description Language (UIDL) that uses Model-Driven Engineering (MDE) for specifying a User Interface (UI) at an implementation independent level. The UI specifications are usually specified in different models. Each UI level is described by a model(s). UsiXML is based on the Cameleon reference framework\cite{Calvary}. This framework describes a UI in four main levels of abstraction: task and domain level, abstract UI level, concrete UI and final UI. On the basis of these 4 levels, UsiXML proposes a set of models:
+\begin{itemize}
+\item \textbf{Transformation model}: contains a set of rules in order to enable a transformation of one specification to another.
+\item \textbf{Domain model}: describes the classes of the objects manipulated by the users while interacting with the system.
+\item \textbf{Task model}: describes the interactive task as viewed by the user interacting with the system. The task model is expressed according to the CTT specification \cite{ConcurTaskTrees_A_Diagrammatic_Notation_for_Specifying_Task_Models}.
+\item \textbf{Abstract user interface model}: represents the view and behavior of the domain concepts and functions in platform independent way.
+\item \textbf{Concrete user interface model}: represents a concretization of the abstract user interface model.
+\item \textbf{Mapping model}: contains a series of related mappings between models or elements of models.
+\item \textbf{Context model}: describes the three aspects of a context of use, which is a user carrying out an interactive task using a specific computing platform in a given surrounding environment.
+\item \textbf{Resource model}: contains definitions of resources attached to abstract or concrete interaction objects.
+\end{itemize}
+
+The user interface model in UsiXML consists of a list of component models (described above) in any order and any number. It doesn't need to include one of each model component and there can be more than one of a particular kind of model component. It's also composed by a creation date, a list of modification dates, a list of authors and a schema version.
+
+UsiXML allows designers to apply a multi-path development of user interfaces. In this development paradigm, a user interface can be specified and produced at and from different, and possibly multiple, levels of abstraction while maintaining the mappings between these levels if required. Thus, the development process can be initiated from any level of abstraction and proceed towards obtaining one or many final user interfaces for various contexts of use at other levels of abstraction. In this way, the model-to-model transformation, which is the cornerstone of Model-Driven Architecture (MDA), can be supported in multiple configurations, based on composition of three basic transformation types\cite{UsiXML_a_Language_Supporting_Multi-Path_Development_of_User_Interfaces}:
+\begin{itemize}
+\item \textbf{abstraction}, is the process of substitution of the input artefacts into more abstract ones;
+\item \textbf{reification}, is the process of substitution of the input artefacts into more concrete ones;
+\item \textbf{translation}, is the process of substitution of the input artefacts aimed at a particular context of use into others that are aimed for a different context.
+\end{itemize} 
+
+
+Multi-path UI development is based on the Cameleon Reference Framework\cite{Calvary}, which defines UI development steps for multi-context interactive applications. The development process with this framework is structured in four steps where each developments step is able to manipulate a set of artefacts in the form of models:
+\begin{itemize}
+\item \textbf{Final UI (FUI)}: is the operational UI. Any UI running on a particular computing platform either by interpretation or by execution.
+
+\item \textbf{Concrete UI (CUI)}: it's a transformation of the abstract UI for a given context of use into Concrete Interaction Objects (CIOs). It defines widgets layout and interface navigation. The CUI abstracts a FUI into a UI definition that is independent of any computing platform. Although a CUI makes explicit the final appearance and style of a FUI, it is still a mock-up that runs only within a particular environment. A CUI can also be considered as a reification of an AUI at the upper level and an abstraction of the FUI with respect to the platform.
+
+\item \textbf{Abstract UI (AUI)}: defines interaction spaces by grouping subtasks according to various criteria, a navigation scheme between the interaction spaces and selects Abstract Interaction Objects (AIOs) for each concept so that they are independent of any modality. An AUI abstracts a CUI into a UI definition that is independent of any modality of interaction. An AUI can also be considered as a canonical expression of the rendering of the domain concepts and tasks in a way that is independent from any modality of interaction. An AUI is considered as an abstraction of a CUI with respect to modality.
+
+\item \textbf{Task and Domain (T\&D)}: describe the various tasks to be carried out and the domain-oriented concepts as they are required by these tasks to be performed. These objects are considered as instances of classes representing the concepts manipulated.
+\end{itemize}
+
+UsiXML is also very extensible. At the model level USIXML allows to define any kind of model. In this sense it is possible to instantiate any new model of the above mentioned classes. At meta-model level USIXML offers a modular structure which clearly segregates the models it describes. This facilitates the integration of new classes of models into UsiXML. The model and its concept is simply declared along with its relationships with other models. Rules exploiting this new model can be defined afterwards.
+
+In conclusion, UsiXML solves every problem stated in \cite{mecano}. UsiXML was design for user interfaces, it's not and adaptation of some modelling language that was meant for other use. It provides several classes of models with different abstraction levels so that every part of the interface is specified. By allowing the application of multi-path development process, it makes sure that every specification is platform independent. Finally, it's a flexible language, UsiXML provides mechanisms that can be used to extend and modify it's models and transformation rules.
