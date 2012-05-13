@@ -1,0 +1,9 @@
+\section{UsiXML semantics}
+\label{section:usixml_semantics}
+
+The core component of a user interface specified in UsiXML
+consists of a uiModel, which is itself decomposed into several models. Not all models should be included. Only those models which are required for the particular user interface are included in a UsiXML file. Figure \ref{content/usixml/uml_spec.png} shows the components of UsiXML in an UML class diagram.
+
+\image{\textwidth}{content/usixml/uml_spec.png}{UsiXML specification as an UML class diagram.}
+
+The uiModel is the topmost superclass containing common features shared by all component models of a user interface. A uiModel may consist of a list of component models in any order and any number, such as task model, a domain model, an abstract UI model, a concrete UI model, a mapping model, and context model, resource model, transformation model. The uiModel is also composed by a creation date, a schema version, a set of authors, a set of versions and a set of comments.
