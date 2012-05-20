@@ -1,3 +1,28 @@
-\section{Spem 2.0}
+\subsection{Spem 2.0}
 \label{subsection:spem2}
 
+SPEM is an OMG standard dedicated to software method modelling. The goal of SPEM is to propose minimal elements necessary to define any software and systems development method, without adding specific features to address particular domains. As a result, this meta-model supports a large range of development methods of different styles, levels of formalism, and life-cycle models.
+
+SPEM is a UML profile, meaning that SPEM reuses UML whenever possible. Consequently, SPEM uses UML for various software model concepts presentations.
+
+The current version of SPEM is 2.0 and it was completely reformulated from the previous one in order to separate the operational aspect of a method from the temporal aspect of a method. As shown in figure \ref{content/usixml/method/spem_base.png}, the SPEM 2.0 meta-model uses seven main meta-model packages:
+\begin{itemize}
+\item \textbf{Method Content} package describes the static aspect of a method; 
+\item \textbf{Process Structure} and \textbf{Process Behaviour} packages describe the dynamic aspect of a method, \textbf{Process With Methods} package describes the link between these two aspects; 
+\item \textbf{Core package} provides the common classes that are used in the different packages; \item \textbf{Method Plug-in} package describes the configuration of a method and Managed Content package describes the documentation of a method.
+\end{itemize}
+
+\image{12cm}{content/usixml/method/spem_base.png}{Structure of the SPEM 2.0 meta-model.}
+
+In the following subsections we'll go into some detail for each package in order to get a better understanding of the SPEM 2.0 method meta-model.
+
+\subsubsection{Core package}
+
+The Core meta-model package contains abstract generalization classes that are specialized in the other meta-model packages. These abstract generalization classes are used to define
+common properties of their specialized classes. The main elements of the core package are:
+\begin{itemize}
+\item The \textbf{Kind class}, that expresses a refined vocabulary specific to a method;
+\item \textbf{Work Definition} is an abstract generalization class that represents the work being performed by a specific role, or the work performed throughout a life-cycle.
+\item \textbf{Work Definition Parameter} is an abstract generalization class that represents parameters for Work Definitions.
+\item \textbf{Work Definition Performer} is an abstract generalization class that represents the relationship of a work performer (role) to a Work Definition.
+\end{itemize}
