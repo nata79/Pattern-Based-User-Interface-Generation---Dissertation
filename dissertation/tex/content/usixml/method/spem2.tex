@@ -26,3 +26,54 @@ common properties of their specialized classes. The main elements of the core pa
 \item \textbf{Work Definition Parameter} is an abstract generalization class that represents parameters for Work Definitions.
 \item \textbf{Work Definition Performer} is an abstract generalization class that represents the relationship of a work performer (role) to a Work Definition.
 \end{itemize}
+
+\subsubsection{Method content}
+
+The method content meta-model package defines the core elements of every method (producer, work unit and work product) independently of any process or development project. It describes the specific development steps that are achieved by which roles with which resources and results, without specifying the placement of these steps within a specific
+development life-cycle.
+
+\image{16cm}{content/usixml/method/spem_mc.png}{Structure of the SPEM 2.0 method content meta-model package.}
+
+Figure \ref{content/usixml/method/spem_mc.png} shows the Method Content meta-model package. The main classes of the Method content meta-model are:
+\begin{itemize}
+\item The \textbf{Task Definition} defines the work being performed by \textit{Roles Definition instances}. A Task is associated with input and output \textit{Work Products}.
+
+\item A \textbf{Step} describes a meaningful and consistent part of the overall work described for
+a \textit{Task Definition}. The collection of Steps defined for a \textit{Task Definition} represents all the work that should be done to achieve the overall development goal of the \textit{Task Definition}.
+
+\item The \textbf{Work Product Definition} describes the product which is used, modified, and
+produced by \textit{Task Definitions}.
+
+\item The \textbf{Role Definition} designs a general reusable definition of an organizational role. It
+defines a set of related skills, competencies, and responsibilities of an individual or a set of individuals. \textit{Roles} are used by \textit{Task Definitions} to define who performs them as well as to define a set of Work \textit{Product Definitions} they are responsible for.
+\end{itemize}
+
+\subsubsection{Process Structure}
+
+The process structure meta-mode defines the structure of the method process. This package represents a process decomposed as a set of Activity classes that are linked to Role classes and Work Product classes. This structure is useful to express the fact that a life-cycle is composed by set of phases, and each phase is composed by set of activities.
+
+\image{16cm}{content/usixml/method/spem_ps.png}{Main classes and associations of SPEM 2.0 process structure package package.}
+
+Figure \ref{content/usixml/method/spem_ps.png} illustrates the Process Structure meta-model package. The most important classes of this meta-model are:
+
+\begin{itemize}
+
+\item A \textit{WorkDefinition} (coming from the Core package) is performed by a \textbf{Work
+Definition Performer}, which is a role, and, through this role, by a \textit{Process Performer}.
+
+\item A \textbf{Breakdown Element} is an abstract generalization class that defines a set of
+properties available to all of its specializations.
+
+\item A \textbf{Work Breakdown Element} provides specific properties for \textit{Breakdown Elements}
+that represent work.
+
+\item An \textbf{Activity} defines basic units of work within a process as well as a process itself. Every activity can represent a process in SPEM 2.0. It relates to \textit{Work Product Use} instances via instances of the \textit{Process Parameter} class and \textit{Role Use} instances via \textit{Process Performer} instances. An activity can be used by another activity, so that the structure of the source activity is copied into the target activity.
+
+\item The \textbf{Role Use} represents a performer of an \textit{Activity} or a participant of the \textit{Activity}. A \textit{Role Use} is only specific to the context of an \textit{Activity}. It is not a general reusable definition of an organizational role like the \textit{Role Definition} of the Method Content package. 
+
+\item A \textbf{Work Product Use} represents an input and/or output type for an \textit{Activity} or
+represents a general participant of the \textit{Activity}.
+
+\item The \textbf{Work Sequence} represents a relationship between two \textit{Work Breakdown Elements} in which one \textit{Work Breakdown Element} depends on the start or finish of another \textit{Work Breakdown Elements} in order to begin or end.
+
+\end{itemize}
