@@ -1,7 +1,9 @@
 \subsection{Spem 2.0}
 \label{subsection:spem2}
 
-SPEM is an OMG standard dedicated to software method modelling. The goal of SPEM is to propose minimal elements necessary to define any software and systems development method, without adding specific features to address particular domains. As a result, this meta-model supports a large range of development methods of different styles, levels of formalism, and life-cycle models.
+SPEM 2.0 is an OMG standard dedicated to software method modelling. This section is an overview of the main features and meta-models defined in SPEM 2.0. A complete specification can be found in \cite{omgspem2}.
+
+The goal of SPEM is to propose minimal elements necessary to define any software and systems development method, without adding specific features to address particular domains. As a result, this meta-model supports a large range of development methods of different styles, levels of formalism, and life-cycle models.
 
 SPEM is a UML profile, meaning that SPEM reuses UML whenever possible. Consequently, SPEM uses UML for various software model concepts presentations.
 
@@ -29,8 +31,7 @@ common properties of their specialized classes. The main elements of the core pa
 
 \subsubsection{Method content}
 
-The method content meta-model package defines the core elements of every method (producer, work unit and work product) independently of any process or development project. It describes the specific development steps that are achieved by which roles with which resources and results, without specifying the placement of these steps within a specific
-development life-cycle.
+The method content meta-model package defines the core elements of every method (producer, work unit and work product) independently of any process or development project. It describes the specific development steps that are achieved by which roles with which resources and results, without specifying the placement of these steps within a specific development life-cycle.
 
 \image{16cm}{content/usixml/method/spem_mc.png}{Structure of the SPEM 2.0 method content meta-model package.}
 
@@ -77,3 +78,16 @@ represents a general participant of the \textit{Activity}.
 \item The \textbf{Work Sequence} represents a relationship between two \textit{Work Breakdown Elements} in which one \textit{Work Breakdown Element} depends on the start or finish of another \textit{Work Breakdown Elements} in order to begin or end.
 
 \end{itemize}
+
+The \textbf{Process Behaviour} meta-model package allows extending these process structures with
+behavioural models. However, it does not introduce its own formalism for behaviour models, but instead provides \textit{links} to existing externally-defined behaviour models, enabling reuse of these approaches from other OMG or third party specifications.
+
+\subsubsection{Process With Methods}
+
+SPEM 2.0 separates reusable core method contents (expressed using the \textit{Method Content} meta-model) from its temporal aspect (expressed using the \textit{Process Structure} meta-model). 
+
+The Process With Methods meta-model package allows the integration of the process definition with instances of the core method content elements. This integration allows the specification of how and which method elements will be applied in a particular state of the process. 
+
+For example, a \textit{Task Definition} can be invoked many times throughout a development process. Each invocation is defined with an individual element of the \textit{Process With Methods} meta-model which is called \textit{Task Use}. The latter manages the \textit{Task Definition} invocation by changing for example the roles involved in performing the task or an omission of specific work product input types. A \textit{Task Use} represents a binding for a \textit{Task Definition} in the context of one specific \textit{Activity}. Therefore, one \textit{Task Definition} can be represented by many \textit{Task Uses}, each within the context of an \textit{Activity} with its own set of relationships.
+
+The SPEM 2.0 specification also contains a \textbf{Managed Content} and \textbf{Method Plug-in} meta-models. The first one introduces concepts for managing the textual documentation of a method while de latter defines concepts for designing and managing repositories of method content and processes.

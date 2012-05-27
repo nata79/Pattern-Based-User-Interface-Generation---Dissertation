@@ -1,2 +1,61 @@
 \subsection{Spem4UsiXML}
 \label{subsection:spem4usixml}
+
+SPEM4UsiXML (SPEM for UsiXML) is dedicated to UsiXML method modelling. The goal of this meta-model is to propose the key elements to define any UsiXML method. SPEM4UsiXML is an extension of SPEM 2.0 (section \ref{subsection:spem2}) that adds some new classes. Therefore, SPEM4UsiXML (like SPEM) is specified using UML. In addition, SPEM4UsiXML (like SPEM) separates the operational aspect of a method from the temporal aspect of a method. This means that SPEM4UsiXML reuses the UML diagrams for the presentation of various UsiXML method concepts. As shown if figure \ref{content/usixml/method/spem4usixml.png}, the SPEM4UsiXML meta-model uses seven main meta-model packages inherited from SPEM: \textit{Method Content}, \textit{Process Structure}, \textit{Process Behaviour}, \textit{Process With Methods}, \textit{Core} \textit{Method Plug-in} and \textit{Managed Content}. SPEM4UsiXML extends some of the classes from \textit{Method Content} and \textit{Process Structure} as we will be explain later in this section.
+
+Additional details on the SPEM4UsiXML meta-model can be found in \cite{usixmlmethod}
+
+\image{12cm}{content/usixml/method/spem4usixml.png}{Structure of the Spem4UsiXML meta-model.}
+
+The \textit{Method Content} and \textit{Process Structure} packages are the only ones that were extended from the original Spem specification that was introduced in section \ref{subsection:spem2}. Hereafter these extensions will detailed.
+
+\subsubsection{Method Content}
+
+The method content meta-model package defines the core elements of every method (producer, work unit and work product) independently of any process or development project.
+
+\image{16cm}{content/usixml/method/spem4usixml_mc.png}{Structure of the Spem4UsiXML method content meta-model package.}
+
+As shown in figure \ref{content/usixml/method/spem4usixml_mc.png}, SPEM4UsiXML adds new classes to the original SPEM method content meta-model package in order to specify the several development steps and sub-steps and also the different kinds of product and producer. The important classes of the \textit{Spem4UsiXML Method content} meta-model are:
+\begin{itemize}
+
+\item The \textbf{Development Step Definition} defines the transformation being performed by \textit{Roles Definition instances}. A \textit{Development Step} is associated to an input and an output \textit{Work Products}. A \textit{Development Step Definition} can be:
+\begin{itemize}
+\item A \textbf{Reification Definition} defines the transformation of a \textit{Work Product Definition} of higher-level into a \textit{Work Product Definition} of lower-level.
+\item An \textbf{Abstraction Definition} defines the transformation of a \textit{Work Product Definition} of lower-level into a \textit{Work Product Definition} of higher-level.
+\item A \textbf{Translation Definition} defines the transformation a \textit{Work Product Definition} based on context.
+\item The \textbf{Code generation Definition} defines the transformation of a \textit{Model Definition} into a \textit{Code Definition}.
+\item The \textbf{Code reverse engineering Definition} defines the transformation of a
+\textit{Code Definition} into a \textit{Model Definition}.
+\end{itemize}
+\item A \textbf{Development Sub-Step Definition} defines the sub-steps of a \textit{Development Step}. A sub-step can be achieved using a service (\textit{Service Definition}). Each service can be based on a set of transformation rules, a program, the context or a template in order to enact the \textit{Development
+Sub-Step}.
+\item A \textbf{Step Definition} is an abstract generalization class that defines a set of properties that are inherited by \textit{Development Step}, and \textit{Development Sub-Step}.
+\item The \textbf{Work Product Definition} describes the product which is used, modified, and produced by \textit{Development Steps}. A \textit{Work Product Definition} can be: a UsiXML model (\textit{Model Definition}) or UI code (\textit{Code Definition}).
+\item A \textbf{Role Definition} defines a set of related skills, competencies, and responsibilities of an individual or a set of individuals. Roles are used by a \textit{Development Step} or by a \textit{Development Sub-Step} to define who performs them as well as to define a set of \textit{Work Product Definitions} they are responsible for. A \textit{Role Definition} can be:
+\begin{itemize}
+\item A \textbf{Tool Definition} describes any automation unit that performs the \textit{Development Step} or \textit{Development Sub-Step}.
+\item The \textbf{Human Actor Definition} describes any person, or organization that performs the \textit{Development Step} or \textit{Development Sub-Step}.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Process Structure}
+
+The process structure meta-mode defines the structure of the method process. This package represents a process decomposed as a set of Activity classes that are linked to Role classes and Work Product classes. This structure is useful to express the fact that a life-cycle is composed by set of phases, and each phase is composed by set of activities.
+
+\image{16cm}{content/usixml/method/spem4usixml_mc.png}{Structure of the Spem4UsiXML process structure meta-model package.}
+
+As shown in figure \ref{content/usixml/method/spem4usixml_mc.png}, Spem4UsiXML adds some new classes to the original Spem process structure package in order to specify the control flow of the development steps and sub-steps and also the different products and producers used in the method process. The important classes of the Spem4UsiXML process structure package are:
+\begin{itemize}
+
+\item The \textbf{Development Path} defines the properties of a UsiXML method.
+\item A \textbf{Breakdown Element} is an abstract generalization class that defines a set of properties available to the elements of a UsiXML method (\textit{Product}, \textit{Development Step} and \textit{Producer}).
+\item A \textbf{Work Breakdown Element} provides specific properties for \textit{Breakdown Elements} that represent \textit{Development Step} and \textit{Development Sub-Step}.
+\item A \textbf{Step Use} is an abstract generalization class that defines a set of properties available to \textit{Development Step}, and \textit{Development Sub-Step}.
+
+\item The \textbf{Development Step Use} defines the transformation steps of the method that are being
+performed by \textit{Role Use} instances. A \textit{Development Step Use} is associated to an input and an output \textit{Work Product Use}. A \textit{Development Step Use} can be: a reification (\textit{Reification Use}), an abstraction (\textit{Abstraction Use}), a translation (\textit{Translation Use}), a code generation (\textit{Code generation Use}) or a code reverse engineering (\textit{Code reverse engineering Use}).
+\item A \textbf{Development Sub-Step Use} defines the sub-steps of a \textit{Development Step Use}.
+\item A \textbf{Role Use} represents a performer of a \textit{Development Step Use} or a \textit{Development Sub-Step Use}.
+\item The \textbf{Work Product Use} represents an input and/or output type for a \textit{Development Step}. It can concern a model (\textit{Model Use}) or code (\textit{Code Use}).
+\item The \textbf{Control Flow} represents a relationship between two \textit{Work Breakdown Elements} in which one \textit{Work Breakdown Element} depends on the start or end of another \textit{Work Breakdown Element} in order to begin or end.
+\end{itemize}
