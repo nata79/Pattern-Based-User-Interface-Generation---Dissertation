@@ -1,13 +1,13 @@
 \chapter{State of the art}
-In this chapter is described the state art regarding model driven development of user interfaces. It will be presented several techniques to develop user interfaces using model driven principles. There is significant ongoing research in this field since the late 1980s. This chapter makes a short summary of that research. Some works will be examined more depth for the sake of example. 
+In this chapter is described the state art regarding model driven development of user interfaces. It will be presented several techniques to develop user interfaces using model driven principles. There is significant ongoing research in this field since the late 1980s. This chapter makes a short summary of that research. Some works will be examined in more depth for the sake of example. 
 
 Model driven development defining characteristic is that software development's primary focus and products are models rather than computer programs. The major advantage of this is that we express models using concepts that are much less bound to the underlying implementation technology and are much closer to the problem domain relative to most popular programming languages \cite{The_Pragmatics_of_Model-Driven_Development}.
 
-Models are easier to maintain than the code itself and, most importantly, they're platform independent. This means that the same model can be used to generate code that runs on a desktop environment, a web environment or even a mobile environment. This makes a a very important feature for user interfaces because modern applications are becoming more and more ubiquitous and it's highly complex and time consuming to build a user interface for every supported platform.
+Models are easier to maintain than the code itself and, most importantly, they're platform independent. This means that the same model can be used to generate code that runs on a desktop environment, a web environment or even a mobile environment. This makes a very important feature for user interfaces because modern applications are becoming more and more ubiquitous and it's highly complex and time consuming to build a user interface for every supported platform.
 
-There are different kinds of models and several techniques to model user interfaces. Some tools like JANUS\cite{janus} only require a domain model to generate a concrete user interface while others like TRIDENT\cite{trident1, trident2} and ADEPT\cite{adept1} also use a task model. All these approaches automate part of the development process. Other approaches like ITS\cite{ITS} require more work from the developers because it doesn't generate any model.
+There are different kinds of models and several techniques to model user interfaces. Some tools like Janus\cite{janus} only require a domain model to generate a concrete user interface while others like Trident\cite{trident1, trident2} and Adept\cite{adept1} also use a task model. All these approaches automate part of the development process. Other approaches like ITS\cite{ITS} require more work from the developers because it doesn't generate any model.
 
-Some more recent work have been using different techniques to generate user interfaces. GADGET\cite{gadget} or Supple\cite{supple} have been using optimization techniques to generate better concrete user interfaces
+Some more recent work have been using different techniques to generate user interfaces. Gadget\cite{gadget} or Supple\cite{supple} have been using optimization techniques to generate better concrete user interfaces
 
 Patterns are widely used in every field of engineering. One of the earlier definitions of patterns can be found on \cite{A_Pattern_Language_Towns_Buildings_Construction}. Almost twenty years later patterns were brought to software engineering by \cite{Design_Patterns}.
 
@@ -24,13 +24,28 @@ UML \cite{The_Unified_Modeling_Language_Reference_Manual} is the industry standa
 
 UsiXML is a user interface description language aimed at expressing user interfaces built with various modalities of interaction and independently of them. UsiXML is XML compliant to enable flexible exchange of information and powerful communication between models and tools used in user interface engineering \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}. One of the great advantages of UsiXML is platform independence providing a multi-path development of user interfaces \cite{UsiXML_a_Language_Supporting_Multi-Path_Development_of_User_Interfaces}. UsiXML characteristics and features give it the potential to become a standard for modelling user interfaces like UML is for software architecture.
 
-There is a lot of work regarding model driven development for user interfaces and the idea that models can simplify the development process is becoming more consensual. Section \ref{section:early_days} focus on projects from the beginnings of model driven development of user interfaces, namely JANUS on section \ref{subsection:janus} and ITS, section \ref{subsection:ITS}.
+There is a lot of work regarding model driven development for user interfaces and the idea that models can simplify the development process is becoming more consensual. Section \ref{section:early_days} focus on projects from the beginnings of model driven development of user interfaces, namely Janus on section \ref{subsection:janus} and Its, section \ref{subsection:ITS}.
 
-Section \ref{section:optimization_based_generation_of_interfaces} will describe optimization based techniques and the GADGET and Supple projects will be examined with more depth.
+Section \ref{section:optimization_based_generation_of_interfaces} will describe optimization based techniques and the Gadget and Supple projects will be examined with more depth.
 
 Section \ref{section:user_interface_patterns} refers to the usage of patterns in user interface design . This section also includes an analysis of IdealXML, a knowledge based tool for designing user interfaces.
+
+Section \ref{section:specification_languages} is about specification languages. UMLi and UsiXML will be analysed in details in sections \ref{subsection:umli} and \ref{subsection:usixml} respectively.
 
 \input{content/state_of_the_art/early_days}
 \input{content/state_of_the_art/optimization_based_generation_of_interfaces}
 \input{content/state_of_the_art/user_interface_patterns}
 \input{content/state_of_the_art/specification_languages}
+
+\section{Conclusion}
+
+The first tools in this chapter were Janus\cite{janus} and Its\cite{ITS}. These tools represent the beginning of model driven development of user interfaces and at the same time two different approaches to this subject. Developers using Janus will decrease the development time of their applications. This seems to be the main goal of the project. Because it only needs one input, the domain model, it doesn't take a lot of effort to create a user interface. Of course this also means that the generated user interface won't have the same quality as one built by hand (depending on the abilities of the developer) and this is the most criticized aspect of Janus. On the other hand, Its can produce high quality user interfaces. But the amount of work necessary to build something is huge compared to Janus. Its also provides a way to divide work through the development team which is a very interesting feature because it facilitates the implementation of different development methodologies alongside this tool.
+
+By analysing these two projects one can infer that there model driven development can be used with two objectives in mind:
+\begin{enumerate}
+\item to build low-cost prototypes of an application rapidly;
+\item to enhance the quality of the final product.
+\end{enumerate}
+
+Janus is clearly a tool that can be used to rapidly create a prototype of an in development application that can be used to communicate with customers or other stake holders. Its is aimed at building better applications with large teams.
+
