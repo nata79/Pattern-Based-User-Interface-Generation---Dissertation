@@ -1,2 +1,16 @@
 \subsection{Forward engineering method}
 \label{subsection:forward_engineering_method}
+
+The starting point of the forward engineering method is a task and a domain model (products). These models are then transformed (work) into an \textit{Abstract user interface model} (product) which is then transformed (work) into a \textit{Concrete user interface model} (product). Finally the code (product) is generated (work).
+
+In order to achieve these transformations, a sequence of development step, reifications and code generation, are performed. Each development step may involve a set of development sub-steps. For example, the first development step involves the development sub-step, \textit{Identification of Abstract user interface structure}. This sub-step consists in the definition of groups of an abstract interaction (an element of the abstract user interface). Each group corresponds to a group of tasks (in task model) tightly coupled together. To achieve its work, the sub-step can use a sequence of rules. For example, the sub-step: \textit{Identification of Abstract UI structure} uses the sequence of two rules:
+\begin{enumerate}
+\item For each leaf task of a task tree, create an Abstract Individual Element;
+\item Create an Abstract Container structure similar to the task decomposition
+structure.
+\end{enumerate}
+Every development step takes as input a UsiXML model and transforms it into another UsiXML model by involving a set of development sub-steps, which in turn, manipulate sub-steps models by using a set of rules. Note that, a development sub-step can use templates of transformations instead of rules. For example, the step \textit{Generating the user interface code} can use a template based approach in order to generate the UI code. Another note is that, each development step and development sub-step has a producer responsible of its execution. For example, the first development step can have a human actor who verifies the transformation done in this step. In turn, the sub-step: \textit{Identification of Abstract UI structure} can have a transformation tool that can execute the rules sequence of this sub-step.
+
+\image{16cm}{content/usixml/method/forward_engineering_method.png}{The forward engineering method.}
+
+More information in deeper detail about de forward engineering method can be found in\cite{DBLP:series/hci/LimbourgV09}.

@@ -6,4 +6,15 @@ consists of a uiModel, which is itself decomposed into several models. Not all m
 
 \image{\textwidth}{content/usixml/uml_spec.png}{UsiXML specification as an UML class diagram.}
 
-The uiModel is the topmost superclass containing common features shared by all component models of a user interface. A uiModel may consist of a list of component models in any order and any number, such as task model, a domain model, an abstract UI model, a concrete UI model, a mapping model, and context model, resource model, transformation model. The uiModel is also composed by a creation date, a schema version, a set of authors, a set of versions and a set of comments.
+The uiModel is the topmost superclass containing common features shared by all component models of a user interface. A uiModel may consist of a list of component models in any order and any number:
+\begin{itemize}
+\item \textbf{Transformation model}: contains a set of rules in order to enable a transformation of one specification to another.
+\item \textbf{Domain model}: describes the classes of the objects manipulated by the users while interacting with the system.
+\item \textbf{Task model}: describes the interactive task as viewed by the user interacting with the system. The task model is expressed according to the CTT specification \cite{ConcurTaskTrees_A_Diagrammatic_Notation_for_Specifying_Task_Models}.
+\item \textbf{Abstract user interface model}: represents the view and behavior of the domain concepts and functions in platform independent way.
+\item \textbf{Concrete user interface model}: represents a concretization of the abstract user interface model.
+\item \textbf{Mapping model}: contains a series of related mappings between models or elements of models.
+\item \textbf{Context model}: describes the three aspects of a context of use, which is a user carrying out an interactive task using a specific computing platform in a given surrounding environment.
+\item \textbf{Resource model}: contains definitions of resources attached to abstract or concrete interaction objects.
+\end{itemize}
+The uiModel is also composed by a creation date, a schema version, a set of authors, a set of versions and a set of comments. A complete reference to UsiXML semantics can be found in \cite{UsiXML_USer_Interface_eXtensible_Markup_Language}.

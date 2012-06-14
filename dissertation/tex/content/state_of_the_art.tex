@@ -41,7 +41,7 @@ Section \ref{section:specification_languages} is about specification languages. 
 
 The first tools in this chapter were Janus\cite{janus} and Its\cite{ITS}. These tools represent the beginning of model driven development of user interfaces and at the same time two different approaches to this subject. Developers using Janus will decrease the development time of their applications. This seems to be the main goal of the project. Because it only needs one input, the domain model, it doesn't take a lot of effort to create a user interface. Of course this also means that the generated user interface won't have the same quality as one built by hand (depending on the abilities of the developer) and this is the most criticized aspect of Janus. On the other hand, Its can produce high quality user interfaces. But the amount of work necessary to build something is huge compared to Janus. Its also provides a way to divide work through the development team which is a very interesting feature because it facilitates the implementation of different development methodologies alongside this tool.
 
-By analysing these two projects one can infer that there model driven development can be used with two objectives in mind:
+By analysing these two projects one can infer that model driven development can be used with two objectives in mind:
 \begin{enumerate}
 \item to build low-cost prototypes of an application rapidly;
 \item to enhance the quality of the final product.
@@ -49,3 +49,29 @@ By analysing these two projects one can infer that there model driven developmen
 
 Janus is clearly a tool that can be used to rapidly create a prototype of an in development application that can be used to communicate with customers or other stake holders. Its is aimed at building better applications with large teams.
 
+In section \ref{section:optimization_based_generation_of_interfaces} were introduced a couple of projects that use numeric optimization to generate user interfaces. The first project was Gadget\cite{gadget}. This is a framework that abstracts the programmer from the optimization itself. The problem with this project is that it's not a complete solution. Developers still have to produce evaluations which can be a tricky subject because it's not trivial to determine what properties make a user interface  ``good''. The second project, Supple\cite{supple}, it's more mature and complete. The objective behind Supple is to generate user interfaces at run time that are optimal to people with special needs.
+
+Although Gadget is meant to simplify numeric optimization of user interfaces in a way that it could be used by any developer it still looks very complex to use this system.
+
+Supple is a more complete system. It receives three types of input models:
+\begin{itemize}
+\item one related to the domain;
+\item other related to the user;
+\item and other related to the platform it's supposed to run on.
+\end{itemize}
+
+This makes Supple easier for developers but doesn't give them much control of the final user interface. The great advantage of this system is his capability to dynamically adapt to the needs of every user.
+
+Section \ref{section:user_interface_patterns} covered the use of user interface patterns in the process of modelling a user interface. In this section IdealXML\cite{IdealXml_An_Interaction_Design_Tool, idealxml2} was looked in detail. IdeaXML is a tool where designers can, using several graphical notations, specify domain models, task models, abstract presentation models and mapping models between them. IdealXML manipulates a pattern repository, where patterns are organized following a hierarchical structure. This enables the usage of patterns at design time.
+
+Unfortunately, like in most projects in this field, IdealXML is an academic project and it's not ready to be adopted by the industry.
+
+Section \ref{section:specification_languages} covered ``Specification Languages''. The reason why this topic was approached in this document is that probably the most important problem with model driven development of user interfaces is the lack of standard specification language like UML.
+
+The first language in this section is UMLi\cite{User_Interface_Modeling_in_UMLi}. This language is an extension to UML that supports every major step of model driven development of user interfaces. It only lacks support for the \textit{concrete user interface model}.
+
+Lastly, UsiXML\cite{UsiXML_a_Language_Supporting_Multi-Path_Development_of_User_Interfaces}. UsiXML is a User Interface Description Language based on the Cameleon reference framework\cite{Calvary}. UsiXML supports every step in the Cameleon framework, including the concrete one, unlike UMLi.
+
+UsiXML also ships with an engineering method and meta-method. Which allows development teams to easily adopt this technology and adapt the methodology according to their needs.
+
+Not just because of all the advantages it provides but also because of it's vast community, UsiXML seems to have the potential to become the standard specification language for user interface specification.

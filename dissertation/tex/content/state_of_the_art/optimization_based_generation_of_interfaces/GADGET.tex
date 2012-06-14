@@ -1,12 +1,12 @@
-\subsection{GADGET}
+\subsection{Gadget}
 \label{subsection:GADGET}
 
 Although optimization-based techniques appear to offer several potential advantages most programmers are intimidated or uncomfortable by the math required to program an optimization. Although optimization tool-kits are available, they typically require substantial specialized knowledge because they have mostly been designed for physics simulations and other traditional optimization problems.
 
-GADGET provides a set of abstractions for many optimization concepts along with a set of mechanisms to help programmers quickly create optimizations, including an efficient lazy evaluation framework, a powerful and configurable optimization structure, and a library of reusable components.
-A programmer creating an optimization using the GADGET tool-kit needs to supply three essential components: an initializer, iterations and evaluations. The initializer creates the initial solutions to be optimized. This might be based on an existing algorithm, or done randomly. Iterations are responsible to transform one potential solution into another, typically using models that are at least partially random. Finally, evaluations are used to judge the different notions of goodness in a solution.
+Gadget provides a set of abstractions for many optimization concepts along with a set of mechanisms to help programmers quickly create optimizations, including an efficient lazy evaluation framework, a powerful and configurable optimization structure, and a library of reusable components.
+A programmer creating an optimization using the Gadget tool-kit needs to supply three essential components: an initializer, iterations and evaluations. The initializer creates the initial solutions to be optimized. This might be based on an existing algorithm, or done randomly. Iterations are responsible to transform one potential solution into another, typically using models that are at least partially random. Finally, evaluations are used to judge the different notions of goodness in a solution.
 
-There’s a standard framework to abstract the concepts and constructs behind evaluations. GADGET allows programmers to focus on creating evaluations to measure criteria that are important to a problem. GADGET then combines these evaluations and uses them to between possible solutions to a problem. This process is divided into five stages. 
+There’s a standard framework to abstract the concepts and constructs behind evaluations. Gadget allows programmers to focus on creating evaluations to measure criteria that are important to the problem. Gadget then combines these evaluations and uses them to choose between a set of possible solutions. This process is divided into five stages. 
 
 First the framework presents each evaluation with the current potential solution, which is called the prior solution. Each evaluation returns an array of double values representing its interpretation of the prior solution. This collection of arrays of double values is called the prior result. 
 
